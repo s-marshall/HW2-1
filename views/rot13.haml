@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    %title Unit 2 Rot 13
+  %body
+    %h2 Enter some text to ROT13:
+    %form{:method => 'post'}
+      =find_and_preserve do
+        %textarea{:name => 'text', :style => 'height: 100px; width: 400px;'}
+          = %Q{#{locals[:text]}}
+      %br
+      %input{:type => 'submit'}
